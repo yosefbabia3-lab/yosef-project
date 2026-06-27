@@ -1,0 +1,81 @@
+/* تصميم الكارد الأساسي */
+.card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 350px; /* متوافق ومثالي لشاشات التليفون */
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+}
+
+.profile-img svg {
+  width: 80px;
+  height: 80px;
+  background-color: #334155;
+  padding: 15px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #f8fafc;
+}
+
+.title {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* توزيع الأزرار بشكل عمودي مريح للمس بالتليفون */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  background-color: #334155;
+  color: #f8fafc;
+  border: 2px solid transparent;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease; /* تأثير حركي ناعم جداً عند التمرير والضغط */
+}
+
+.btn:hover {
+  background-color: #a855f7; /* بنفسجي مودرن */
+  border-color: #c084fc;
+  transform: translateY(-2px); /* يرتفع قليلاً ليعطي شعوراً بالتفاعل */
+}
+
+/* صندوق التنبيه التفاعلي المبرمج بالـ React */
+.alert-box {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #475569;
+  border: 1px solid transparent;
+  color: #f8fafc;
+  animation: fadeIn 0.4s ease; /* حركة ظهور ناعمة */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
