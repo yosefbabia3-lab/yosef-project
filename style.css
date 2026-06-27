@@ -1,302 +1,70 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap");
-
-:where(*, *::before, *::after) {
-  box-sizing: border-box;
-}
-
-:where(*) {
-  margin: 0;
-  padding: 0;
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  padding: 50px;
-  display: flex;
-  background: #222;
-  align-items: center;
-  justify-content: center;
-  font-family: "Cairo", sans-serif;
-}
-
-.services-box {
-  width: 670px;
-  display: flex;
-  padding: 20px 15px;
-  border-radius: 20px;
-  background: #171717;
-  flex-direction: column;
-}
-
-.services-container {
-  gap: 15px;
-  width: 100%;
-  display: flex;
-  align-items: flex;
-}
-
-.services-con {
-  width: 120px;
-  border-right: 1px solid #fff;
-}
-
-.service-box {
-  width: 100%;
-  padding: 5px;
-  display: flex;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  flex-direction: column;
-}
-
-.box-services {
-  gap: 10px;
-  padding: 10px;
-  color: #fff;
-  display: flex;
-  transition: 0.3s;
-  border-radius: 10px;
-  align-items: center;
-  flex-direction: column;
-}
-
-.box-services p {
-  user-select: none;
-  font-size: 0.75rem;
-}
-
-.box-services i {
-  padding: 8px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  transition:
-    background 0.1s ease,
-    color 0.1s ease;
-}
-
-.box-services i:hover {
-  background: #1f2030;
-}
-
-.fa-tools:hover {
-  color: #13a3b5;
-}
-
-.fa-truck:hover {
-  color: #ff6105;
-}
-
-.fa-headset:hover {
-  color: #4a53fa;
-}
-
-.fa-credit-card:hover {
-  color: #992bff;
-}
-
-.fa-music:hover {
-  color: #e950f7;
-}
-
-.fa-gift:hover {
-  color: #0ba84a;
-}
-
-.con2 {
-  gap: 10px;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-
-  display: none;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  border-radius: 15px;
-  background: #1f2030;
-}
-
-.con2.active {
-  flex: 1;
-  display: flex;
-}
-
-.con2 .div {
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  color: #fff;
-  display: flex;
-  border-radius: 10px;
-  align-items: center;
-  background: #2b2d42;
-  justify-content: center;
-}
-
-.div a {
-  color: #fff;
-  font-size: 1.3rem;
-  border-radius: 10px;
-  text-decoration: none;
-}
-
-.div a:hover {
-  color: #c4b5fd;
-  text-decoration: underline;
-  text-decoration-color: #c4b5fd;
-}
-
-.div button {
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  color: #e950f7;
-  font-size: 1.5rem;
-  padding: 20px 20px;
-  border-radius: 10px;
-  background: transparent;
-  border: 3px solid #e950f7;
-  transition:
-    scale 0.3s ease,
-    background 0.3s ease,
-    color 0.3s ease;
-}
-
-.div button:hover {
-  scale: 1.05;
-  background: #e950f7;
-  color: #000;
-}
-
-.services-tools form {
-  gap: 20px;
-  color: #fff;
-  padding: 10px;
-  display: flex;
-  border-radius: 10px;
-  align-items: center;
-  background: #2b2d42;
-  justify-content: center;
-}
-
-.services-tools form input {
-  width: 40px;
-  height: 40px;
-  border: none;
-  cursor: pointer;
-  appearance: none;
-  background: transparent;
-  -webkit-appearance: none;
-}
-
-.services-tools form input::-webkit-color-swatch-wrapper {
-  padding: 0;
-}
-
-.services-tools form input::-webkit-color-swatch {
-  border-radius: 20px;
-  border: 3px solid #fff;
-}
-
-.services-headset form {
-  gap: 20px;
-  color: #fff;
-  padding: 10px;
-  display: flex;
-  border-radius: 10px;
-  align-items: center;
-  background: #2b2d42;
-  justify-content: center;
-}
-
-.input {
-  height: 30px;
-  width: 200px;
-}
-
-.services-headset form input {
-  width: 100%;
-  border: none;
-  height: 100%;
-  color: #fff;
-  outline: none;
-  padding: 10px;
-  text-align: end;
-  font-size: 1rem;
-  border-radius: 2rem;
-  background: #1f2030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #212121;
+    font-family: Arial, sans-serif;
+    padding: 10px 0;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .container {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  border-radius: 10px;
-  transition: background 0.4s ease;
+    width: 800px;
+    height: 800px;
+    overflow: scroll;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #8e00d5;
+    box-shadow: 0 0 20px rgba(142, 0, 213, 0.5);
+    transition: background 0.4s ease;
+}
+
+.container::-webkit-scrollbar {
+    width: 16px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0);
+    border: 3px solid #aa00ff;
+    border-radius: 10px;
 }
 
 .box-img {
-  columns: 3;
-  column-gap: 10px;
+    columns: 3;
+    column-gap: 10px;
 }
 
 img {
-  width: 100%;
-  height: auto;
-  margin: 5px 0;
-  object-fit: cover;
-  border: 2px solid #171717;
-  box-shadow: 0 0 20px #171717;
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+    margin: 5px 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid #8e00d5;
+    box-shadow: 0 0 20px rgba(142, 0, 213, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 img:hover {
-  transform: translateY(-5px) scale(1.01);
-  box-shadow: 0 0 20px #171717;
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 0 20px #8e00d5;
 }
 
 .img {
-  filter: drop-shadow(0 0 20px #171717);
-}
-
-.display-btn {
-  gap: 20px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.services-credit-card .div {
-  gap: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.services-credit-card .div #counter {
-  font-size: 1rem;
-  padding: 5px 20px;
-  border-radius: 10px;
-  background: #1f2030;
-}
-
-.circle {
-  top: -10px;
-  width: 40px;
-  left: -10px;
-  height: 40px;
-  position: fixed;
-  border-radius: 50%;
-  pointer-events: none;
-  background: #dddddd;
-  box-shadow: 0 0 10px #dddddd;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    filter: drop-shadow(0 0 20px #8e00d5);
+    box-shadow: 0 0 20px rgba(142, 0, 213, 0.3);
 }
